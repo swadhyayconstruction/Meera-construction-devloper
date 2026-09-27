@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Swadhyay Construction | Architectural Excellence & Civil Engineering</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0A0A0C',
+                            dark: '#141418',
+                            card: '#1C1C22',
+                            surface: '#24242C',
+                            border: '#33333E',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            goldDark: '#997A15',
+                            light: '#F4F4F6',
+                            muted: '#9CA3AF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Strict global overflow & stability guardrails to banish screen flickering & horizontal scroll jitter */
+        html, body {
+            overflow-x: hidden !important;
+            max-width: 100vw !important;
+            width: 100%;
+            background-color: #0A0A0C;
+            color: #F4F4F6;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Prevent GPU layout thrashing and flickering during scrolling */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        .gpu-accelerate {
+            transform: translateZ(0);
+            will-change: transform, opacity;
+        }
+
+        /* Section Separator Lines */
+        .section-divider {
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.35) 50%, transparent 100%);
+        }
+
+        /* Architectural Grid Background */
+        .arch-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        /* Custom Modern Glass Panels & Cards */
+        .glass-panel {
+            background: rgba(28, 28, 34, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(212, 175, 55, 0.22);
+        }
+        
+        .glass-card {
+            background: rgba(20, 20, 24, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -8px rgba(212, 175, 55, 0.15);
+        }
+
+        /* Gold Gradient Text */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 0%, #D4AF37 50%, #F3E5AB 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #33333E;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-brand-light">
+
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-brand-black/95 backdrop-blur-md border-b border-white/10" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo -->
+                <a href="#hero" onclick="navigateToSection(event, 'hero')" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full border border-brand-gold/60 flex items-center justify-center bg-brand-dark group-hover:border-brand-gold transition-colors">
+                        <span class="font-serif font-bold text-brand-gold text-xl">S</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-lg tracking-wider text-white group-hover:text-brand-gold transition-colors">SWADHYAY</span>
+                        <span class="text-[9px] tracking-widest uppercase text-brand-gold/90 -mt-1">Construction</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden xl:flex items-center space-x-6 text-xs font-semibold uppercase tracking-wider">
+                    <a href="#about" onclick="navigateToSection(event, 'about')" class="text-brand-light/80 hover:text-brand-gold transition-colors">About</a>
+                    <a href="#experience" onclick="navigateToSection(event, 'experience')" class="text-brand-light/80 hover:text-brand-gold transition-colors">Experience</a>
+                    <a href="#services" onclick="navigateToSection(event, 'services')" class="text-brand-light/80 hover:text-brand-gold transition-colors">Services</a>
+                    <a href="#gallery" onclick="navigateToSection(event, 'gallery')" class="text-brand-light/80 hover:text-brand-gold transition-colors">Projects</a>
+                    <a href="#process" onclick="navigateToSection(event, 'process')" class="text-brand-light/80 hover:text-brand-gold transition-colors">Process</a>
+                    <a href="#quality" onclick="navigateToSection(event, 'quality')" class="text-brand-light/80 hover:text-brand-gold transition-colors">Engineering</a>
+                    <a href="#why-us" onclick="navigateToSection(event, 'why-us')" class="text-brand-light/80 hover:text-brand-gold transition-colors">Why Us</a>
+                    <a href="#testimonials" onclick="navigateToSection(event, 'testimonials')" class="text-brand-light/80 hover:text-brand-gold transition-colors">Reviews</a>
+                </nav>
+
+                <!-- Phone CTA Buttons -->
+                <div class="hidden xl:flex items-center gap-3">
+                    <a href="tel:7990029194" class="px-4 py-2.5 text-xs font-semibold tracking-wider text-white bg-brand-surface border border-brand-gold/40 rounded-full hover:border-brand-gold hover:text-brand-gold transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-brand-gold text-xs"></i>
+                        <span>+91 79900 29194</span>
+                    </a>
+                    <a href="#contact" onclick="navigateToSection(event, 'contact')" class="px-5 py-2.5 text-xs font-semibold tracking-wider text-brand-black bg-brand-gold rounded-full hover:bg-brand-goldLight transition-all shadow-md shadow-brand-gold/20 flex items-center gap-2">
+                        <span>GET CONSULTATION</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Hamburger Button -->
+                <button id="mobile-menu-btn" class="xl:hidden text-white hover:text-brand-gold p-2 focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-brand-dark border-b border-brand-gold/20 px-6 py-6 space-y-3 shadow-2xl">
+            <a href="tel:7990029194" class="mobile-nav-link flex items-center justify-between text-sm text-brand-gold font-semibold py-2.5 border-b border-brand-gold/20">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-phone"></i> Call: +91 79900 29194</span>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+            </a>
+            <a href="https://wa.me/917990029194?text=Hello%20Swadhyay%20Construction,%20I%20would%20like%20to%20inquire%20about%20a%20project." target="_blank" class="mobile-nav-link flex items-center justify-between text-sm text-emerald-400 font-semibold py-2 border-b border-white/5">
+                <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Quick Chat</span>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+            </a>
+            <a href="#about" onclick="navigateToSection(event, 'about')" class="mobile-nav-link block text-sm text-brand-light/90 hover:text-brand-gold py-2 border-b border-white/5">About Us</a>
+            <a href="#experience" onclick="navigateToSection(event, 'experience')" class="mobile-nav-link block text-sm text-brand-light/90 hover:text-brand-gold py-2 border-b border-white/5">Site Experience</a>
+            <a href="#services" onclick="navigateToSection(event, 'services')" class="mobile-nav-link block text-sm text-brand-light/90 hover:text-brand-gold py-2 border-b border-white/5">Core Services</a>
+            <a href="#gallery" onclick="navigateToSection(event, 'gallery')" class="mobile-nav-link block text-sm text-brand-light/90 hover:text-brand-gold py-2 border-b border-white/5">Project Portfolio</a>
+            <a href="#process" onclick="navigateToSection(event, 'process')" class="mobile-nav-link block text-sm text-brand-light/90 hover:text-brand-gold py-2 border-b border-white/5">Construction Workflow</a>
+            <a href="#quality" onclick="navigateToSection(event, 'quality')" class="mobile-nav-link block text-sm text-brand-light/90 hover:text-brand-gold py-2 border-b border-white/5">Engineering Standards</a>
+            <a href="#why-us" onclick="navigateToSection(event, 'why-us')" class="mobile-nav-link block text-sm text-brand-light/90 hover:text-brand-gold py-2 border-b border-white/5">Why Choose Us</a>
+            <a href="#testimonials" onclick="navigateToSection(event, 'testimonials')" class="mobile-nav-link block text-sm text-brand-light/90 hover:text-brand-gold py-2 border-b border-white/5">Client Reviews</a>
+            <a href="#contact" onclick="navigateToSection(event, 'contact')" class="mobile-nav-link block text-center text-brand-black bg-brand-gold font-semibold text-xs tracking-wider uppercase py-3 rounded-xl mt-4">Book Consultation</a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 arch-grid bg-brand-black overflow-hidden gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-surface border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                        Building Dreams. Creating Legacies.
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl xl:text-7xl font-serif font-bold leading-tight tracking-tight">
+                        Precision Architectural <br>
+                        <span class="gold-gradient-text italic font-normal">Design & Civil Execution</span>
+                    </h1>
+
+                    <p class="text-brand-muted text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+                        Swadhyay Construction turns architectural visions into everlasting structural realities. From vastu-compliant 2D blueprints and photorealistic 3D elevations to seismic-resistant RCC framework construction.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#contact" onclick="navigateToSection(event, 'contact')" class="px-8 py-4 bg-brand-gold text-brand-black font-semibold rounded-full hover:bg-brand-goldLight transition-all duration-300 shadow-lg shadow-brand-gold/20 flex items-center gap-3 text-xs tracking-wider uppercase">
+                            Get A Consultation
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="tel:7990029194" class="px-8 py-4 bg-brand-surface border border-brand-gold/40 text-white font-semibold rounded-full hover:border-brand-gold hover:text-brand-gold transition-all text-xs tracking-wider uppercase flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-brand-gold"></i>
+                            <span>Call +91 79900 29194</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-3xl overflow-hidden border border-brand-gold/30 shadow-2xl glass-card p-3">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Modern Architecture Elevation" class="w-full h-[420px] object-cover rounded-2xl filter brightness-95">
+                        <div class="absolute top-6 right-6 bg-brand-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-brand-gold/30 text-[10px] text-brand-gold tracking-widest uppercase font-semibold">
+                            Sample Reference Design
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6 p-5 glass-panel rounded-2xl border border-brand-gold/30">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-brand-gold/20 border border-brand-gold/40 flex items-center justify-center text-brand-gold text-lg">
+                                    <i class="fa-solid fa-house-circle-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Full Turnkey Construction</h4>
+                                    <p class="text-xs text-brand-muted">2D Plans → 3D Renders → RCC Frame → Finishing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="stats" class="py-16 bg-brand-dark gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="text-center p-6 glass-card rounded-2xl border-t-2 border-brand-gold">
+                    <div class="text-3xl sm:text-4xl font-serif font-bold text-brand-gold mb-1">12+</div>
+                    <p class="text-xs font-semibold text-brand-light uppercase tracking-wider">Years Experience</p>
+                    <p class="text-[11px] text-brand-muted mt-1">Civil engineering prowess</p>
+                </div>
+
+                <div class="text-center p-6 glass-card rounded-2xl border-t-2 border-brand-gold">
+                    <div class="text-3xl sm:text-4xl font-serif font-bold text-white mb-1">180+</div>
+                    <p class="text-xs font-semibold text-brand-light uppercase tracking-wider">Completed Projects</p>
+                    <p class="text-[11px] text-brand-muted mt-1">Villas, bungalows & spaces</p>
+                </div>
+
+                <div class="text-center p-6 glass-card rounded-2xl border-t-2 border-brand-gold">
+                    <div class="text-3xl sm:text-4xl font-serif font-bold text-brand-gold mb-1">450K+</div>
+                    <p class="text-xs font-semibold text-brand-light uppercase tracking-wider">Sq. Ft. Constructed</p>
+                    <p class="text-[11px] text-brand-muted mt-1">Under strict QC standards</p>
+                </div>
+
+                <div class="text-center p-6 glass-card rounded-2xl border-t-2 border-brand-gold">
+                    <div class="text-3xl sm:text-4xl font-serif font-bold text-white mb-1">100%</div>
+                    <p class="text-xs font-semibold text-brand-light uppercase tracking-wider">Quality Rate</p>
+                    <p class="text-[11px] text-brand-muted mt-1">Transparent & timely delivery</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="about" class="py-24 bg-brand-black arch-grid gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=600&q=80" alt="Construction Progress" class="w-full h-64 object-cover rounded-2xl border border-white/10">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=80" alt="Completed Modern Home" class="w-full h-64 object-cover rounded-2xl border border-white/10 mt-8">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">About Swadhyay Construction</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold leading-tight">
+                        Where Engineering Discipline Meets Luxury Architecture
+                    </h2>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Swadhyay Construction is a distinguished civil engineering and architectural firm dedicated to constructing high-end residential villas, commercial structures, and contemporary elevations. We combine time-tested civil engineering standards with progressive 3D modeling technology.
+                    </p>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Our company ethos revolves around four non-negotiable principles: unyielding quality in raw material selection, strict adherence to project timelines, absolute clarity in financial estimates, and structural strength designed for generations.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-gold"></i>
+                            <span class="text-xs font-semibold text-white">Vastu-Compliant Plans</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-gold"></i>
+                            <span class="text-xs font-semibold text-white">Licensed Civil Engineers</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-gold"></i>
+                            <span class="text-xs font-semibold text-white">IS-Code Compliant RCC</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-gold"></i>
+                            <span class="text-xs font-semibold text-white">Full Turnkey Execution</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="experience" class="py-24 bg-brand-dark gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">On-Site Execution</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold">Working Experience & Technical Mastery</h2>
+                <p class="text-brand-muted text-sm">Deep technical breakdown of how Swadhyay manages every civil construction phase.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-mountain-city"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-white">1. Soil & Substructure Execution</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed">
+                        Topographical soil bearing capacity analysis, deep foundation excavation, anti-termite chemical barrier treatment, and raft/isolated footing casting with heavy grade M25 concrete.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-white">2. Seismic RCC Framing</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed">
+                        Fe550D TMT rebar binding following Zone-3/4 seismic detailing standards, machine-batched M25/M30 concrete column and beam pouring, and strict 28-day curing cycles.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-white">3. AAC Block & Brick Masonry</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed">
+                        High-thermal-insulation Autoclaved Aerated Concrete (AAC) block jointing with polymer mortar, chicken wire mesh reinforcement at concrete joints, and dual-coat damp-proof plastering.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-droplet-slash"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-white">4. Chemical Waterproofing</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed">
+                        Elastomeric polymer slurry coating over roof slabs, brick bat coba insulation, and ponding test verification for all wet areas (bathrooms, balconies, terrace).
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-faucet-drip"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-white">5. Plumbing & Electrical MEP</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed">
+                        CPVC/UPVC multi-layer pressure tested plumbing lines, fire-retardant FRLS copper wiring in concealed conduits, and earth-pit grounding installations.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-paint-roller"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-white">6. Facade & Architectural Finishings</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed">
+                        Weather-shield exterior acrylic emulsion paints, stone veneer cladding, CNC louvers, Italian marble/vitrified tile flooring, and custom ceiling detailings.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="services" class="py-24 bg-brand-black arch-grid gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Specialized Solutions</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold">Our 9 Core Architectural & Civil Services</h2>
+                <p class="text-brand-muted text-sm">Click "Learn More" on any card below to view detailed scope and deliverables.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="openServiceModal('Residential Construction', 'Full turnkey construction of luxury bungalows, duplex villas, and modern family residences. Includes foundation excavation, RCC structural framing, waterproofing guarantees, premium tile flooring, electrical/plumbing conduits, and exterior paint finishes.')">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-house-chimney-window"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-white mb-2">1. Residential Construction</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed mb-4">Luxury villas and independent houses built from ground breaking to final keys.</p>
+                    <span class="text-brand-gold text-xs font-semibold flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="openServiceModal('Commercial Construction', 'High-durability commercial complexes, corporate offices, retail hubs, and multi-story spaces. Designed for optimal floor load distribution, fire safety compliance, and maximum rentable square footage.')">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-white mb-2">2. Commercial Construction</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed mb-4">Retail spaces, showrooms, and offices built with high load-bearing standards.</p>
+                    <span class="text-brand-gold text-xs font-semibold flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="openServiceModal('Architectural Design', 'Comprehensive master planning focusing on natural ventilation, sunlight orientation, cross-ventilation, functional spatial circulation, and iconic modern aesthetic identity.')">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-pencil-ruler"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-white mb-2">3. Architectural Design</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed mb-4">Creative and functional space concepts balancing aesthetic elegance with feasibility.</p>
+                    <span class="text-brand-gold text-xs font-semibold flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="openServiceModal('Civil Engineering', 'Complete structural calculations, soil bearing testing, column/beam reinforcement detailing, concrete mix design, and IS-code compliant site supervision.')">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-white mb-2">4. Civil Engineering</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed mb-4">Heavy structural calculations, soil load analysis, and daily on-site supervision.</p>
+                    <span class="text-brand-gold text-xs font-semibold flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="openServiceModal('2D Floor Plans', 'Vastu-compliant, space-optimized 2D architectural blueprints with precise room measurements, door/window schedules, furniture placements, and circulation corridors.')">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-white mb-2">5. 2D Floor Plans</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed mb-4">Precise CAD blueprint layouts optimized for maximum usable room space.</p>
+                    <span class="text-brand-gold text-xs font-semibold flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="openServiceModal('3D Home Design', 'Photorealistic 3D interior and exterior models depicting exact material textures, daylight simulation, landscape integration, and spatial feel prior to construction.')">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-cube"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-white mb-2">6. 3D Home Design</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed mb-4">Hyper-realistic 3D renders depicting material textures, lighting, and views.</p>
+                    <span class="text-brand-gold text-xs font-semibold flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="openServiceModal('Home Elevation Design', 'Striking front facade designs utilizing natural stone veneers, wooden louvers, glass railings, exterior warm lighting accents, and weather-resistant wall panels.')">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-white mb-2">7. Home Elevation Design</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed mb-4">Iconic front building facades tailored to give your property a luxury identity.</p>
+                    <span class="text-brand-gold text-xs font-semibold flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="openServiceModal('Renovation & Remodeling', 'Structural strengthening, layout expansions, waterproofing retrofits, ceiling redesigns, and modern elevation upgrades for older buildings.')">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-white mb-2">8. Renovation & Remodeling</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed mb-4">Transforming existing structures with retrofitting and modern redesigns.</p>
+                    <span class="text-brand-gold text-xs font-semibold flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="openServiceModal('Project Consultation', 'Expert site evaluation, structural stability audits, municipal planning approvals advisory, and material quantity/cost estimation.')">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-white mb-2">9. Project Consultation</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed mb-4">Professional advisory covering structural stability audits, planning, and budgets.</p>
+                    <span class="text-brand-gold text-xs font-semibold flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details Modal -->
+    <div id="service-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-panel p-8 rounded-3xl max-w-md w-full border border-brand-gold/40 relative space-y-4">
+            <button onclick="closeServiceModal()" class="absolute top-6 right-6 text-brand-muted hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="modal-title" class="text-2xl font-serif font-bold text-brand-gold">Service Details</h3>
+            <p id="modal-desc" class="text-brand-light/90 text-sm leading-relaxed"></p>
+            <div class="pt-4 border-t border-white/10 flex justify-end">
+                <a href="#contact" onclick="closeServiceModal(); navigateToSection(event, 'contact');" class="px-6 py-2.5 bg-brand-gold text-brand-black font-semibold text-xs rounded-full uppercase tracking-wider">Book Consultation</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <section id="gallery" class="py-24 bg-brand-dark gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Visual Portfolio</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold">Featured Architectural Showcase</h2>
+                <p class="text-brand-muted text-sm">Filter our floor plans, active RCC construction sites, 3D renderings, and completed elevations.</p>
+            </div>
+
+            <!-- Gallery Category Filters -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12">
+                <button onclick="filterGallery('all')" class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-gold text-brand-black" data-category="all">ALL WORKS</button>
+                <button onclick="filterGallery('floor-plans')" class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-surface text-white hover:text-brand-gold border border-white/10" data-category="floor-plans">FLOOR PLANS</button>
+                <button onclick="filterGallery('sites')" class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-surface text-white hover:text-brand-gold border border-white/10" data-category="sites">CONSTRUCTION SITES</button>
+                <button onclick="filterGallery('elevations')" class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-surface text-white hover:text-brand-gold border border-white/10" data-category="elevations">HOME ELEVATIONS</button>
+                <button onclick="filterGallery('completed')" class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-surface text-white hover:text-brand-gold border border-white/10" data-category="completed">COMPLETED HOMES</button>
+                <button onclick="filterGallery('3d')" class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-surface text-white hover:text-brand-gold border border-white/10" data-category="3d">3D DESIGNS</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="gallery-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item completed glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', 'Modern Horizon Villa', 'Completed Residential Project')">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Completed Villa" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-brand-black/80 px-2.5 py-1 rounded text-[10px] text-brand-gold tracking-widest uppercase">Sample Reference</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <span class="text-brand-gold text-[10px] font-semibold uppercase tracking-wider">Completed Home</span>
+                                <h4 class="text-white text-base font-serif font-bold">Modern Horizon Villa</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item 3d glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80', 'Contemporary Facade Render', '3D Architectural Visualization')">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="3D Design" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-brand-black/80 px-2.5 py-1 rounded text-[10px] text-brand-gold tracking-widest uppercase">3D Render Design</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <span class="text-brand-gold text-[10px] font-semibold uppercase tracking-wider">3D Visualization</span>
+                                <h4 class="text-white text-base font-serif font-bold">Contemporary Facade Render</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item sites glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1200&q=80', 'RCC Column Framing', 'Active Construction Site')">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=80" alt="Construction Site" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-brand-black/80 px-2.5 py-1 rounded text-[10px] text-brand-gold tracking-widest uppercase">Actual Site Execution</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <span class="text-brand-gold text-[10px] font-semibold uppercase tracking-wider">Construction Site</span>
+                                <h4 class="text-white text-base font-serif font-bold">RCC Superstructure Work</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item floor-plans glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80', '4BHK Villa Blueprint Layout', '2D Precision Plan')">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80" alt="Floor Plan" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-brand-black/80 px-2.5 py-1 rounded text-[10px] text-brand-gold tracking-widest uppercase">CAD Blueprint</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <span class="text-brand-gold text-[10px] font-semibold uppercase tracking-wider">2D Floor Plan</span>
+                                <h4 class="text-white text-base font-serif font-bold">4BHK Luxury Villa Layout</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item elevations glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80', 'Stone & Glass Elevation', 'Modern Facade Design')">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Elevation" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-brand-black/80 px-2.5 py-1 rounded text-[10px] text-brand-gold tracking-widest uppercase">Sample Reference</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <span class="text-brand-gold text-[10px] font-semibold uppercase tracking-wider">Elevation Design</span>
+                                <h4 class="text-white text-base font-serif font-bold">Stone & Glass Elevation</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item completed glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80', 'Minimalist Courtyard Residence', 'Completed Project')">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="Completed Residence" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-brand-black/80 px-2.5 py-1 rounded text-[10px] text-brand-gold tracking-widest uppercase">Sample Reference</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <span class="text-brand-gold text-[10px] font-semibold uppercase tracking-wider">Completed Residence</span>
+                                <h4 class="text-white text-base font-serif font-bold">Minimalist Courtyard Residence</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 hidden flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-brand-gold">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center space-y-4">
+            <img id="lightbox-img" src="" alt="Full View" class="max-h-[75vh] mx-auto rounded-xl border border-white/20">
+            <div>
+                <h3 id="lightbox-title" class="text-xl font-serif font-bold text-white"></h3>
+                <p id="lightbox-subtitle" class="text-brand-gold text-xs uppercase tracking-widest mt-1"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <section id="process" class="py-24 bg-brand-black arch-grid gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Step-By-Step Workflow</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold">Our 7-Step Construction Process</h2>
+                <p class="text-brand-muted text-sm">A transparent, stage-by-stage methodology ensuring smooth project progression.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-brand-gold">
+                    <span class="text-brand-gold font-serif font-bold text-3xl block mb-2">01</span>
+                    <h4 class="text-base font-semibold text-white mb-2">Consultation</h4>
+                    <p class="text-brand-muted text-xs leading-relaxed">Understanding plot orientation, budget goals, family preferences, and space requirements.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-brand-gold">
+                    <span class="text-brand-gold font-serif font-bold text-3xl block mb-2">02</span>
+                    <h4 class="text-base font-semibold text-white mb-2">Planning & Survey</h4>
+                    <p class="text-brand-muted text-xs leading-relaxed">Topographical plot measurements, soil bearing capacity testing, and Vastu analysis.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-brand-gold">
+                    <span class="text-brand-gold font-serif font-bold text-3xl block mb-2">03</span>
+                    <h4 class="text-base font-semibold text-white mb-2">2D Floor Plan</h4>
+                    <p class="text-brand-muted text-xs leading-relaxed">Drafting precise room layouts, circulation paths, door/window schedules, and structural columns.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-brand-gold">
+                    <span class="text-brand-gold font-serif font-bold text-3xl block mb-2">04</span>
+                    <h4 class="text-base font-semibold text-white mb-2">3D Exterior Design</h4>
+                    <p class="text-brand-muted text-xs leading-relaxed">Creating photorealistic 3D elevations and texture previews prior to ground breaking.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-brand-gold">
+                    <span class="text-brand-gold font-serif font-bold text-3xl block mb-2">05</span>
+                    <h4 class="text-base font-semibold text-white mb-2">Cost Estimation</h4>
+                    <p class="text-brand-muted text-xs leading-relaxed">Detailed Bill of Quantities (BOQ), material specifications, and milestone payment schedules.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-brand-gold lg:col-span-2">
+                    <span class="text-brand-gold font-serif font-bold text-3xl block mb-2">06</span>
+                    <h4 class="text-base font-semibold text-white mb-2">On-Site Construction & Framing</h4>
+                    <p class="text-brand-muted text-xs leading-relaxed">Excavation, footing foundation, RCC slab casting, brickwork masonry, plastering, electrical/plumbing conduits, and facade finishing.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-brand-gold">
+                    <span class="text-brand-gold font-serif font-bold text-3xl block mb-2">07</span>
+                    <h4 class="text-base font-semibold text-white mb-2">Handover</h4>
+                    <p class="text-brand-muted text-xs leading-relaxed">Final quality audit, deep cleaning, punch-list resolution, and key handover.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="quality" class="py-24 bg-brand-dark gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Structural Integrity</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold">Engineering & Quality Standards</h2>
+                <p class="text-brand-muted text-sm">We strictly enforce Indian Standard (IS) civil codes across all raw materials and execution phases.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="text-brand-gold text-3xl"><i class="fa-solid fa-cubes-stacked"></i></div>
+                    <h3 class="text-xl font-serif font-semibold text-white">RCC Concrete Mix</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed">
+                        Design mix M20/M25 concrete grades with certified slump tests and compulsory 7-day and 28-day cube compression strength testing.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="text-brand-gold text-3xl"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="text-xl font-serif font-semibold text-white">Steel Rebar Grade</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed">
+                        Exclusive use of certified Fe550D TMT steel bars for high ductility and superior earthquake resistance in all columns and beams.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="text-brand-gold text-3xl"><i class="fa-solid fa-droplet-slash"></i></div>
+                    <h3 class="text-xl font-serif font-semibold text-white">Waterproofing Guarantees</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed">
+                        Multi-layer chemical elastomeric waterproofing treatment on roof slabs, sunken toilets, and basements to prevent dampness forever.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="why-us" class="py-24 bg-brand-black arch-grid gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">The Swadhyay Advantage</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold">Why Choose Swadhyay Construction?</h2>
+                <p class="text-brand-muted text-sm">Built on client trust, safety compliance, and civil engineering precision.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="glass-card p-6 rounded-2xl flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex-shrink-0 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-semibold text-white mb-1">Quality Materials</h4>
+                        <p class="text-brand-muted text-xs leading-relaxed">Sourcing only tested Grade-53 cements and branded steel rebar.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex-shrink-0 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-semibold text-white mb-1">Skilled Professionals</h4>
+                        <p class="text-brand-muted text-xs leading-relaxed">Direct site management by experienced civil engineers and supervisors.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex-shrink-0 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-semibold text-white mb-1">Modern Architecture</h4>
+                        <p class="text-brand-muted text-xs leading-relaxed">Contemporary elevations, optimized natural light, and ventilation design.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex-shrink-0 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-semibold text-white mb-1">Transparent Process</h4>
+                        <p class="text-brand-muted text-xs leading-relaxed">No hidden fees or unvetted scope changes without prior client approval.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex-shrink-0 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-semibold text-white mb-1">Detailed Planning</h4>
+                        <p class="text-brand-muted text-xs leading-relaxed">Comprehensive timelines and stage-wise progress reporting.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex-shrink-0 flex items-center justify-center text-brand-gold text-xl">
+                        <i class="fa-solid fa-heart-circle-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-semibold text-white mb-1">Customer-Focused</h4>
+                        <p class="text-brand-muted text-xs leading-relaxed">Dedicated project support to address your queries at every step.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="testimonials" class="py-24 bg-brand-dark gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Client Endorsements</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold">What Our Homeowners Say</h2>
+                <p class="text-brand-muted text-sm">Real feedback from clients who built their homes with Swadhyay Construction.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="flex text-brand-gold gap-1 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-brand-muted text-xs leading-relaxed italic">
+                        "Swadhyay Construction executed our 4BHK villa elevation and structural work flawlessly. Their team maintained extreme transparency regarding material quality."
+                    </p>
+                    <div>
+                        <h5 class="text-sm font-semibold text-white">Rajesh Patel</h5>
+                        <p class="text-[11px] text-brand-gold">Villa Owner</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="flex text-brand-gold gap-1 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-brand-muted text-xs leading-relaxed italic">
+                        "The 2D floor plans and 3D architectural renders gave us complete clarity before ground digging started. Highly recommended for full turnkey builds!"
+                    </p>
+                    <div>
+                        <h5 class="text-sm font-semibold text-white">Amit Shah</h5>
+                        <p class="text-[11px] text-brand-gold">Residential Client</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-white/5 space-y-4">
+                    <div class="flex text-brand-gold gap-1 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-brand-muted text-xs leading-relaxed italic">
+                        "Punctual milestones, superior RCC column casting, and polite coordination. They handled our commercial property renovation with total professional diligence."
+                    </p>
+                    <div>
+                        <h5 class="text-sm font-semibold text-white">Sanjay Verma</h5>
+                        <p class="text-[11px] text-brand-gold">Commercial Complex Owner</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="contact" class="py-24 bg-brand-black arch-grid gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Direct Inquiry</span>
+                        <h2 class="text-3xl sm:text-5xl font-serif font-bold mt-2">Book Your Consultation</h2>
+                        <p class="text-brand-muted text-sm leading-relaxed mt-4">
+                            Connect directly with our engineering lead via phone or submit this form to auto-format your project specifications for <strong class="text-brand-gold">swadhyaybuild@gmail.com</strong>.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="glass-card p-4 rounded-xl flex items-center gap-4 border border-brand-gold/30">
+                            <div class="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold text-base">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-brand-muted block uppercase tracking-wider">Direct Call / Helpline</span>
+                                <a href="tel:7990029194" class="text-white font-bold text-sm sm:text-base hover:text-brand-gold transition-colors">+91 79900 29194</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-xl flex items-center gap-4 border border-emerald-500/30">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-lg">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-brand-muted block uppercase tracking-wider">WhatsApp Quick Chat</span>
+                                <a href="https://wa.me/917990029194?text=Hello%20Swadhyay%20Construction,%20I%20would%20like%20to%20inquire%20about%20a%20construction%20project." target="_blank" class="text-emerald-400 font-semibold text-xs hover:underline">Chat on +91 79900 29194 &rarr;</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold text-base">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-brand-muted block uppercase tracking-wider">Official Email</span>
+                                <a href="mailto:swadhyaybuild@gmail.com" class="text-white font-medium text-xs hover:text-brand-gold transition-colors">swadhyaybuild@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-brand-gold/30">
+                        <form id="consultation-form" onsubmit="handleConsultationSubmit(event)" class="space-y-6">
+                            
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-2">Full Name *</label>
+                                    <input type="text" id="form-name" required placeholder="e.g. Rahul Sharma" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-2">Phone Number *</label>
+                                    <input type="tel" id="form-phone" required placeholder="e.g. +91 79900 29194" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-2">Email Address *</label>
+                                    <input type="email" id="form-email" required placeholder="e.g. rahul@gmail.com" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-2">Project Type *</label>
+                                    <select id="form-service" required class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold">
+                                        <option value="Residential Villa Construction">Residential Villa Construction</option>
+                                        <option value="Commercial Construction">Commercial Construction</option>
+                                        <option value="Architectural & Elevation Design">Architectural & Elevation Design</option>
+                                        <option value="2D Floor Plans & 3D Renderings">2D Floor Plans & 3D Renderings</option>
+                                        <option value="Renovation & Repair">Renovation & Repair</option>
+                                        <option value="General Consultation">General Consultation</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-brand-muted uppercase tracking-wider mb-2">Project Location & Scope *</label>
+                                <textarea id="form-message" rows="4" required placeholder="Describe plot dimensions, site location, timeline expectations..." class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-brand-gold text-brand-black font-semibold rounded-xl hover:bg-brand-goldLight transition-all shadow-lg shadow-brand-gold/20 tracking-wider text-xs uppercase flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Send Consultation Request Via Gmail</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div id="confirm-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-panel p-8 rounded-3xl max-w-md w-full border border-brand-gold/40 text-center space-y-4">
+            <div class="w-16 h-16 rounded-full bg-brand-gold/20 text-brand-gold border border-brand-gold/40 flex items-center justify-center mx-auto text-2xl">
+                <i class="fa-solid fa-envelope-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-white">Opening Gmail Compose...</h3>
+            <p class="text-brand-muted text-xs leading-relaxed">
+                Your consultation details have been formatted. A new Gmail Compose tab is opening to send directly to <strong class="text-brand-gold">swadhyaybuild@gmail.com</strong>.
+            </p>
+            <p class="text-brand-muted text-[11px]">
+                If Gmail did not open automatically, please click below:
+            </p>
+            <div class="pt-2 flex flex-col gap-2">
+                <a id="fallback-gmail-btn" href="#" target="_blank" class="px-6 py-3 bg-brand-gold text-brand-black font-semibold text-xs rounded-xl uppercase tracking-wider">
+                    Open Gmail Directly
+                </a>
+                <button onclick="closeConfirmModal()" class="px-6 py-2 text-brand-muted hover:text-white text-xs">
+                    Close Modal
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <footer class="bg-brand-black pt-16 pb-12 border-t border-white/5 gpu-accelerate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                
+                <div class="space-y-4">
+                    <a href="#hero" onclick="navigateToSection(event, 'hero')" class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full border border-brand-gold/40 flex items-center justify-center bg-brand-dark">
+                            <span class="font-serif font-bold text-brand-gold text-xl">S</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif font-bold text-lg tracking-wider text-white">SWADHYAY</span>
+                            <span class="text-[9px] tracking-widest uppercase text-brand-gold/80 -mt-1">Construction</span>
+                        </div>
+                    </a>
+                    <p class="text-brand-muted text-xs leading-relaxed">
+                        “Building Dreams. Creating Legacies.” Master structural execution and luxury architectural design tailored for timeless longevity.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="text-white text-xs font-semibold uppercase tracking-widest mb-4">Quick Navigation</h5>
+                    <ul class="space-y-2 text-xs text-brand-muted">
+                        <li><a href="#about" onclick="navigateToSection(event, 'about')" class="hover:text-brand-gold transition-colors">About Us</a></li>
+                        <li><a href="#experience" onclick="navigateToSection(event, 'experience')" class="hover:text-brand-gold transition-colors">Experience</a></li>
+                        <li><a href="#services" onclick="navigateToSection(event, 'services')" class="hover:text-brand-gold transition-colors">Services</a></li>
+                        <li><a href="#gallery" onclick="navigateToSection(event, 'gallery')" class="hover:text-brand-gold transition-colors">Project Portfolio</a></li>
+                        <li><a href="#process" onclick="navigateToSection(event, 'process')" class="hover:text-brand-gold transition-colors">Workflow</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white text-xs font-semibold uppercase tracking-widest mb-4">Capabilities</h5>
+                    <ul class="space-y-2 text-xs text-brand-muted">
+                        <li>Residential Villa Builds</li>
+                        <li>Commercial Complexes</li>
+                        <li>2D Vastu Floor Plans</li>
+                        <li>3D Architectural Renders</li>
+                        <li>Exterior Elevation Designs</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white text-xs font-semibold uppercase tracking-widest mb-4">Direct Contact</h5>
+                    <p class="text-xs text-brand-muted mb-1">Direct Helpline:</p>
+                    <a href="tel:7990029194" class="text-brand-gold font-bold text-sm hover:underline block mb-3">+91 79900 29194</a>
+                    <p class="text-xs text-brand-muted mb-1">Send site drawings to:</p>
+                    <a href="mailto:swadhyaybuild@gmail.com" class="text-brand-gold font-semibold text-xs hover:underline block">swadhyaybuild@gmail.com</a>
+                    <div class="flex gap-4 pt-4 text-brand-muted text-sm">
+                        <a href="https://wa.me/917990029194" target="_blank" class="hover:text-emerald-400" title="WhatsApp"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                        <a href="tel:7990029194" class="hover:text-brand-gold" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+                        <a href="mailto:swadhyaybuild@gmail.com" class="hover:text-brand-gold" title="Email Us"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-muted gap-4">
+                <p>&copy; 2026 Swadhyay Construction. All Rights Reserved.</p>
+                <p>Designed with High-Precision Architectural Standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ... existing JavaScript code ...
+
+        // Consultation Form Gmail Redirect
+        function handleConsultationSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('form-name').value.trim();
+            const phone = document.getElementById('form-phone').value.trim();
+            const email = document.getElementById('form-email').value.trim();
+            const service = document.getElementById('form-service').value;
+            const message = document.getElementById('form-message').value.trim();
+
+            const recipient = "swadhyaybuild@gmail.com";
+            const subject = encodeURIComponent(`Consultation Inquiry from ${name} - ${service}`);
+            
+            const bodyContent = `Dear Swadhyay Construction Team,
+
+I would like to schedule a project consultation. Below are my project details:
+
+• Client Name: ${name}
+• Phone Number: ${phone}
+• Client Email: ${email}
+• Project Type / Service: ${service}
+
+• Project Location & Scope Details:
+${message}
+
+• Note: I can also be reached on phone (+91 79900 29194 / ${phone}).
+
+Looking forward to your expert response.
+
+Best regards,
+${name}`;
+
+            const encodedBody = encodeURIComponent(bodyContent);
+
+            // Web Gmail URL
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${encodedBody}`;
+
+            // Set fallback button
+            document.getElementById('fallback-gmail-btn').href = gmailUrl;
+
+            // Launch Gmail Web Compose in new tab
+            window.open(gmailUrl, '_blank');
+
+            // Show Confirmation Modal
+            document.getElementById('confirm-modal').classList.remove('hidden');
+        }
+
+        function closeConfirmModal() {
+            document.getElementById('confirm-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
