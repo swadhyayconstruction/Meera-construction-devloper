@@ -1,0 +1,1093 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meera Construction & Developer | Building Dreams. Creating Legacies.</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#C59B27',
+                            dark: '#B38600',
+                            light: '#EAD180',
+                            subtle: '#FFFDF5'
+                        },
+                        charcoal: {
+                            DEFAULT: '#111827',
+                            light: '#1F2937',
+                            soft: '#374151'
+                        },
+                        offwhite: {
+                            DEFAULT: '#F8F9FA',
+                            dark: '#F1F3F5',
+                            card: '#FAFAFB'
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #111827;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Cinzel', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #C59B27 0%, #B38600 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(135deg, #C59B27, #B38600) 1;
+        }
+        .bg-pattern {
+            background-color: #f8f9fa;
+            background-image: radial-gradient(#C59B27 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+            background-opacity: 0.15;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8F9FA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C59B27;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B38600;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-white relative">
+
+    <!-- STICKY HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-header border-b border-gray-100 transition-all duration-300 shadow-sm" id="header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 sm:h-24">
+                
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-charcoal rounded-xl flex items-center justify-center border border-gold/40 shadow-md transition-transform duration-300 group-hover:scale-105">
+                        <i class="fa-solid font-bold text-gold text-xl sm:text-2xl">M</i>
+                    </div>
+                    <div>
+                        <span class="block text-lg sm:text-xl font-bold tracking-wider font-heading text-charcoal leading-none">MEERA</span>
+                        <span class="block text-[10px] sm:text-xs tracking-[0.2em] font-medium text-gold uppercase mt-1">Construction & Developer</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden xl:flex items-center space-x-6 text-sm font-medium text-charcoal-soft">
+                    <a href="#home" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">Home</a>
+                    <a href="#about" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">About Us</a>
+                    <a href="#leadership" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">Leadership</a>
+                    <a href="#services" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">Services</a>
+                    <a href="#standards" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">Standards</a>
+                    <a href="#projects" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">Projects</a>
+                    <a href="#timeline" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">Process</a>
+                    <a href="#contact" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">Contact</a>
+                </nav>
+
+                <!-- Header Call Button -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="tel:7990029194" class="inline-flex items-center gap-2 bg-charcoal hover:bg-gold text-white font-semibold text-xs sm:text-sm px-5 py-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-gold/20">
+                        <i class="fa-solid fa-phone text-gold group-hover:text-white transition-colors"></i>
+                        <span>+91 79900 29194</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Hamburger Button -->
+                <div class="flex xl:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-charcoal hover:text-gold p-2 rounded-lg focus:outline-none" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-gray-200 px-6 pt-4 pb-6 transition-all duration-300 shadow-xl">
+            <div class="flex flex-col space-y-4 font-medium text-charcoal">
+                <a href="#home" class="mobile-link text-lg py-1 hover:text-gold">Home</a>
+                <a href="#about" class="mobile-link text-lg py-1 hover:text-gold">About Us</a>
+                <a href="#leadership" class="mobile-link text-lg py-1 hover:text-gold">Leadership</a>
+                <a href="#services" class="mobile-link text-lg py-1 hover:text-gold">Services</a>
+                <a href="#standards" class="mobile-link text-lg py-1 hover:text-gold">Quality Standards</a>
+                <a href="#projects" class="mobile-link text-lg py-1 hover:text-gold">Projects Portfolio</a>
+                <a href="#timeline" class="mobile-link text-lg py-1 hover:text-gold">Construction Process</a>
+                <a href="#contact" class="mobile-link text-lg py-1 hover:text-gold">Contact Us</a>
+                <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
+                    <a href="tel:7990029194" class="w-full text-center bg-charcoal text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone text-gold"></i>
+                        Call +91 79900 29194
+                    </a>
+                    <a href="https://wa.me/919510477366?text=Hello%20Meera%20Construction,%20I%20would%20like%20to%20inquire%20about%20a%20project." target="_blank" class="w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        WhatsApp Chat (+91 95104 77366)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="pt-28 sm:pt-36 pb-16 lg:pb-24 bg-gradient-to-b from-offwhite to-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Text Content -->
+                <div class="lg:col-span-7 space-y-6 sm:space-y-8">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold-dark text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-award text-gold"></i>
+                        <span>Premium Architectural & Civil Engineering</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal leading-tight tracking-tight">
+                        Building Dreams. <br>
+                        <span class="gold-gradient-text">Creating Legacies.</span>
+                    </h1>
+
+                    <p class="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl font-light">
+                        At <strong class="font-semibold text-charcoal">Meera Construction & Developer</strong>, we merge architectural precision, structural integrity, and modern aesthetic elegance to craft spaces built for generations.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="#projects" class="inline-flex items-center justify-center gap-3 bg-charcoal hover:bg-gold text-white font-bold text-base px-8 py-4 rounded-xl transition-all duration-300 shadow-xl hover:shadow-gold/20 transform hover:-translate-y-0.5">
+                            <span>Explore Projects</span>
+                            <i class="fa-solid fa-arrow-right text-gold group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center gap-3 bg-white hover:bg-offwhite text-charcoal border-2 border-gray-200 hover:border-gold font-bold text-base px-8 py-4 rounded-xl transition-all duration-300">
+                            <i class="fa-solid fa-comments text-gold"></i>
+                            <span>Get Consultation</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlights Badges -->
+                    <div class="pt-6 border-t border-gray-100 grid grid-cols-3 gap-4 sm:gap-6 text-center sm:text-left">
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold">
+                                <i class="fa-solid fa-shield-halved text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-charcoal text-sm">RCC Standard</h4>
+                                <p class="text-xs text-gray-500">M25/M30 Concrete</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold">
+                                <i class="fa-solid fa-compass-drafting text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-charcoal text-sm">3D Elevation</h4>
+                                <p class="text-xs text-gray-500">Modern Planning</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold">
+                                <i class="fa-solid fa-handshake-check text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-charcoal text-sm">Transparent</h4>
+                                <p class="text-xs text-gray-500">No Hidden Costs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Banner -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white group">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Luxury Modern Architecture Villa" 
+                             class="w-full h-[380px] sm:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
+                             onerror="this.src='https://placehold.co/800x1000/111827/C59B27?text=Luxury+Villa+Design'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent"></div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-header border border-white/20 shadow-lg flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-white text-xl font-bold flex-shrink-0">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-gold-dark uppercase tracking-wider">Engineered Excellence</p>
+                                <p class="text-sm font-bold text-charcoal">Custom Residential & Commercial Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LEADERSHIP SECTION -->
+    <section id="leadership" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-gold font-bold text-sm uppercase tracking-widest">Visionary Leadership</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal">Guided by Engineering & Innovation</h2>
+                <p class="text-gray-600 text-base">Our leaders bring technical expertise, structural reliability, and innovative architectural concepts to every build.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Leader 1: Patel Ashwin -->
+                <div class="bg-offwhite rounded-2xl p-8 border border-gray-200/80 hover:border-gold transition-all duration-300 shadow-sm hover:shadow-xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-bl-full pointer-events-none"></div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-6">
+                        <div class="w-20 h-20 rounded-2xl bg-charcoal text-gold flex items-center justify-center text-3xl font-bold shadow-md group-hover:bg-gold group-hover:text-white transition-colors duration-300 flex-shrink-0">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-gold uppercase tracking-wider">Civil Engineer</span>
+                            <h3 class="text-2xl font-bold text-charcoal font-heading">Patel Ashwin</h3>
+                            <p class="text-xs text-gray-500 mt-1">Lead Structural Engineer & Execution Head</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        Specializes in high-precision RCC execution, heavy foundation engineering, structural auditing, and material testing to guarantee lifetime structural durability.
+                    </p>
+                    <div class="space-y-2 text-xs font-semibold text-charcoal">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-gold"></i>
+                            <span>Structural Design & Heavy RCC Execution</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-gold"></i>
+                            <span>On-Site Supervision & Quality Assurance</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-gold"></i>
+                            <span>Steel & Concrete Quality Testing Standards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leader 2: Patel Vishwam -->
+                <div class="bg-offwhite rounded-2xl p-8 border border-gray-200/80 hover:border-gold transition-all duration-300 shadow-sm hover:shadow-xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-bl-full pointer-events-none"></div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-6">
+                        <div class="w-20 h-20 rounded-2xl bg-charcoal text-gold flex items-center justify-center text-3xl font-bold shadow-md group-hover:bg-gold group-hover:text-white transition-colors duration-300 flex-shrink-0">
+                            <i class="fa-solid fa-ruler-combined"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-gold uppercase tracking-wider">Developer</span>
+                            <h3 class="text-2xl font-bold text-charcoal font-heading">Patel Vishwam</h3>
+                            <p class="text-xs text-gray-500 mt-1">Head of Project Planning & Client Relations</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        Drives modern architectural planning, transparent project execution schedules, client collaboration, and full-spectrum residential site development.
+                    </p>
+                    <div class="space-y-2 text-xs font-semibold text-charcoal">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-gold"></i>
+                            <span>Project Master Planning & Layout Optimization</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-gold"></i>
+                            <span>Client Experience & Transparent Management</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-gold"></i>
+                            <span>Modern Architectural Elevation & Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US & QUALITY STANDARDS -->
+    <section id="about" class="py-16 sm:py-24 bg-pattern relative border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-gold font-bold text-sm uppercase tracking-widest">About Meera Construction</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal leading-snug">Uncompromised Structural Strength & Modern Elegance</h2>
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                        At <strong class="text-charcoal font-semibold">Meera Construction & Developer</strong>, we believe every project is a monument of trust. Whether crafting a single luxury bungalow or developing expansive commercial complexes, our core pillars remain Quality, Precision, Transparency, and Reliability.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                            <h4 class="font-bold text-charcoal text-lg">100% Transparency</h4>
+                            <p class="text-xs text-gray-500 mt-1">No hidden costs, detailed material estimates.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                            <h4 class="font-bold text-charcoal text-lg">On-Time Delivery</h4>
+                            <p class="text-xs text-gray-500 mt-1">Strict milestones and timeline adherence.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RCC Quality Specifications Card -->
+                <div id="standards" class="lg:col-span-6">
+                    <div class="bg-charcoal text-white rounded-3xl p-8 sm:p-10 shadow-2xl relative border border-gold/30">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/20 text-gold text-xs font-semibold uppercase mb-6">
+                            <i class="fa-solid fa-microscope"></i> Civil Engineering Benchmark
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-6 font-heading">Our Strict RCC Specifications</h3>
+
+                        <div class="space-y-5 text-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-gold/20 text-gold flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-cubes"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gold text-base">M25 / M30 Concrete Grade</h4>
+                                    <p class="text-gray-300 text-xs mt-1">Ready-mix or precisely batched concrete guaranteeing optimal compressive strength for columns, beams, and slabs.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-gold/20 text-gold flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-bars-staggered"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gold text-base">Fe550 TMT Steel Reinforcement</h4>
+                                    <p class="text-gray-300 text-xs mt-1">Certified high-yield earthquake-resistant steel bars for high tensile endurance.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-gold/20 text-gold flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-droplet"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gold text-base">Scientific Curing & Testing</h4>
+                                    <p class="text-gray-300 text-xs mt-1">21-28 day wet curing protocol alongside cube strength tests prior to structural handovers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9 CORE SERVICES SECTION -->
+    <section id="services" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-gold font-bold text-sm uppercase tracking-widest">Our Expertise</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal">9 Core Engineering & Building Services</h2>
+                <p class="text-gray-600 text-base">From conceptual 2D/3D design to turnkey construction execution, we cover all facets of modern real estate development.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+                <!-- Service Cards will be injected via JS or defined structurally -->
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE PORTFOLIO GALLERY -->
+    <section id="projects" class="py-16 sm:py-24 bg-offwhite border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-gold font-bold text-sm uppercase tracking-widest">Architectural Showcase</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal">Featured Portfolio & Designs</h2>
+                <p class="text-gray-600 text-base">Explore our sample designs, completed residential structures, and 3D architectural blueprints.</p>
+            </div>
+
+            <!-- Portfolio Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10" id="portfolio-filters">
+                <button class="filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-charcoal text-white" data-filter="all">All Designs</button>
+                <button class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-white text-charcoal hover:bg-gold hover:text-white border border-gray-200" data-filter="elevations">Elevations</button>
+                <button class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-white text-charcoal hover:bg-gold hover:text-white border border-gray-200" data-filter="floorplans">Floor Plans</button>
+                <button class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-white text-charcoal hover:bg-gold hover:text-white border border-gray-200" data-filter="construction">Construction Sites</button>
+                <button class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-white text-charcoal hover:bg-gold hover:text-white border border-gray-200" data-filter="completed">Completed Homes</button>
+                <button class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-white text-charcoal hover:bg-gold hover:text-white border border-gray-200" data-filter="3ddesigns">3D Designs</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+                <!-- Gallery items dynamic insertion via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSTRUCTION PROCESS TIMELINE -->
+    <section id="timeline" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-gold font-bold text-sm uppercase tracking-widest">How We Work</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal">7-Step Construction Process</h2>
+                <p class="text-gray-600 text-base">A streamlined, transparent timeline ensuring peace of mind from initial idea to key handover.</p>
+            </div>
+
+            <div class="relative border-l-2 border-gold/30 ml-4 sm:ml-32 space-y-12">
+                <!-- Step 1 -->
+                <div class="relative pl-8 sm:pl-12 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-charcoal text-gold border-2 border-gold flex items-center justify-center font-bold text-sm group-hover:bg-gold group-hover:text-white transition-colors">1</div>
+                    <span class="hidden sm:inline-block absolute -left-32 top-1 text-xs font-bold text-gold uppercase tracking-wider">Step 01</span>
+                    <h3 class="text-xl font-bold text-charcoal font-heading">Consultation & Needs Assessment</h3>
+                    <p class="text-gray-600 text-sm mt-1 max-w-2xl">Understanding plot dimensions, budget constraints, design preferences, and lifestyle needs with our civil engineers.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative pl-8 sm:pl-12 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-charcoal text-gold border-2 border-gold flex items-center justify-center font-bold text-sm group-hover:bg-gold group-hover:text-white transition-colors">2</div>
+                    <span class="hidden sm:inline-block absolute -left-32 top-1 text-xs font-bold text-gold uppercase tracking-wider">Step 02</span>
+                    <h3 class="text-xl font-bold text-charcoal font-heading">Site Planning & Surveying</h3>
+                    <p class="text-gray-600 text-sm mt-1 max-w-2xl">Conducting soil testing, plot orientation check, Vastu layout mapping, and municipal boundary approvals.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative pl-8 sm:pl-12 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-charcoal text-gold border-2 border-gold flex items-center justify-center font-bold text-sm group-hover:bg-gold group-hover:text-white transition-colors">3</div>
+                    <span class="hidden sm:inline-block absolute -left-32 top-1 text-xs font-bold text-gold uppercase tracking-wider">Step 03</span>
+                    <h3 class="text-xl font-bold text-charcoal font-heading">2D Floor Plan Finalization</h3>
+                    <p class="text-gray-600 text-sm mt-1 max-w-2xl">Drafting accurate architectural floor layouts with optimal room dimensions, ventilation, and space utilization.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative pl-8 sm:pl-12 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-charcoal text-gold border-2 border-gold flex items-center justify-center font-bold text-sm group-hover:bg-gold group-hover:text-white transition-colors">4</div>
+                    <span class="hidden sm:inline-block absolute -left-32 top-1 text-xs font-bold text-gold uppercase tracking-wider">Step 04</span>
+                    <h3 class="text-xl font-bold text-charcoal font-heading">3D Elevation & Photorealistic Renderings</h3>
+                    <p class="text-gray-600 text-sm mt-1 max-w-2xl">Visualizing exterior textures, lighting, color themes, and materials through full 3D renderings before groundbreaking.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="relative pl-8 sm:pl-12 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-charcoal text-gold border-2 border-gold flex items-center justify-center font-bold text-sm group-hover:bg-gold group-hover:text-white transition-colors">5</div>
+                    <span class="hidden sm:inline-block absolute -left-32 top-1 text-xs font-bold text-gold uppercase tracking-wider">Step 05</span>
+                    <h3 class="text-xl font-bold text-charcoal font-heading">Quality Check & Material Selection</h3>
+                    <p class="text-gray-600 text-sm mt-1 max-w-2xl">Selecting certified M25/M30 concrete mixes, Fe550 TMT steel, branded bricks, plumbing, and electrical fixtures.</p>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="relative pl-8 sm:pl-12 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-charcoal text-gold border-2 border-gold flex items-center justify-center font-bold text-sm group-hover:bg-gold group-hover:text-white transition-colors">6</div>
+                    <span class="hidden sm:inline-block absolute -left-32 top-1 text-xs font-bold text-gold uppercase tracking-wider">Step 06</span>
+                    <h3 class="text-xl font-bold text-charcoal font-heading">On-Site Execution & Civil Construction</h3>
+                    <p class="text-gray-600 text-sm mt-1 max-w-2xl">Foundation excavation, RCC frame casting, brickwork, plastering, and waterproofing under daily engineer supervision.</p>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="relative pl-8 sm:pl-12 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-charcoal text-gold border-2 border-gold flex items-center justify-center font-bold text-sm group-hover:bg-gold group-hover:text-white transition-colors">7</div>
+                    <span class="hidden sm:inline-block absolute -left-32 top-1 text-xs font-bold text-gold uppercase tracking-wider">Step 07</span>
+                    <h3 class="text-xl font-bold text-charcoal font-heading">Final Inspection & Handover</h3>
+                    <p class="text-gray-600 text-sm mt-1 max-w-2xl">Rigorous quality inspection, finishing touches, clean-up, and official key handover for your new home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSULTATION FORM & CONTACT SECTION -->
+    <section id="contact" class="py-16 sm:py-24 bg-pattern relative border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Details -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-gold font-bold text-sm uppercase tracking-widest">Get In Touch</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal mt-2">Let's Build Your Vision</h2>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">Have a plot ready or seeking expert architectural consultation? Reach out to Patel Ashwin or Patel Vishwam directly.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Direct Phone -->
+                        <a href="tel:7990029194" class="flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-gold transition-all shadow-sm group">
+                            <div class="w-12 h-12 rounded-xl bg-charcoal text-gold flex items-center justify-center text-xl group-hover:bg-gold group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-medium">Direct Call</p>
+                                <p class="text-base font-bold text-charcoal">+91 79900 29194</p>
+                            </div>
+                        </a>
+
+                        <!-- Direct WhatsApp -->
+                        <a href="https://wa.me/919510477366?text=Hello%20Meera%20Construction,%20I%20would%20like%20to%20inquire%20about%20a%20project." target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-gold transition-all shadow-sm group">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-2xl group-hover:bg-emerald-700 transition-colors">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-medium">WhatsApp Quick Chat</p>
+                                <p class="text-base font-bold text-charcoal">+91 95104 77366</p>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:swadhyaybuild@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-gold transition-all shadow-sm group">
+                            <div class="w-12 h-12 rounded-xl bg-charcoal text-gold flex items-center justify-center text-xl group-hover:bg-gold group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-medium">Email Inquiry</p>
+                                <p class="text-base font-bold text-charcoal">swadhyaybuild@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <!-- Key Leaders Direct Contact Badge -->
+                        <div class="p-6 rounded-2xl bg-charcoal text-white space-y-4">
+                            <h4 class="text-gold font-bold text-sm uppercase tracking-wider">Direct Key Contacts</h4>
+                            <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+                                <div>
+                                    <p class="font-bold text-sm">Patel Ashwin</p>
+                                    <p class="text-xs text-gray-400">Civil Engineer</p>
+                                </div>
+                                <a href="tel:7990029194" class="text-xs bg-gold/20 hover:bg-gold text-gold hover:text-white px-3 py-1.5 rounded-lg transition-colors font-semibold">Call</a>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="font-bold text-sm">Patel Vishwam</p>
+                                    <p class="text-xs text-gray-400">Developer</p>
+                                </div>
+                                <a href="https://wa.me/919510477366?text=Hello%20Patel%20Vishwam,%20I%20would%20like%20to%20discuss%20a%20construction%20project." target="_blank" class="text-xs bg-emerald-600/20 hover:bg-emerald-600 text-emerald-400 hover:text-white px-3 py-1.5 rounded-lg transition-colors font-semibold">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consultation Form Card -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-gray-200">
+                        <h3 class="text-2xl font-bold text-charcoal mb-2 font-heading">Book Free Consultation</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm mb-6">Fill in your requirements below. Submitting will prepare a direct email message to swadhyaybuild@gmail.com.</p>
+
+                        <form id="consultation-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-bold text-charcoal uppercase tracking-wider mb-2">Your Name *</label>
+                                    <input type="text" id="form-name" required placeholder="e.g. Rahul Patel" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none text-sm transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-charcoal uppercase tracking-wider mb-2">Phone Number *</label>
+                                    <input type="tel" id="form-phone" required placeholder="e.g. +91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none text-sm transition-all">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-bold text-charcoal uppercase tracking-wider mb-2">Email Address</label>
+                                    <input type="email" id="form-email" placeholder="e.g. rahul@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none text-sm transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-charcoal uppercase tracking-wider mb-2">Project Type *</label>
+                                    <select id="form-project" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none text-sm transition-all bg-white">
+                                        <option value="Residential Construction">Residential Construction</option>
+                                        <option value="Commercial Construction">Commercial Construction</option>
+                                        <option value="Architectural & 3D Design">Architectural & 3D Design</option>
+                                        <option value="Home Elevation Design">Home Elevation Design</option>
+                                        <option value="Renovation & Remodeling">Renovation & Remodeling</option>
+                                        <option value="Structural Civil Engineering">Structural Civil Engineering</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-charcoal uppercase tracking-wider mb-2">Project Details & Requirements</label>
+                                <textarea id="form-message" rows="4" placeholder="Mention plot size, location, estimated budget, or specific design preferences..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none text-sm transition-all"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-charcoal hover:bg-gold text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-gold/20 text-base flex items-center justify-center gap-3">
+                                <i class="fa-solid fa-paper-plane text-gold group-hover:text-white"></i>
+                                <span>Send Consultation Request</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP & CALL QUICK ACTION BUTTONS -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        <a href="https://wa.me/919510477366?text=Hello%20Meera%20Construction,%20I%20would%20like%20to%20inquire%20about%20a%20project." target="_blank" class="w-13 h-13 sm:w-14 sm:h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110" title="Chat on WhatsApp (+91 95104 77366)">
+            <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl"></i>
+        </a>
+        <a href="tel:7990029194" class="w-13 h-13 sm:w-14 sm:h-14 bg-charcoal hover:bg-gold text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 border-2 border-gold" title="Call Now (+91 79900 29194)">
+            <i class="fa-solid fa-phone text-lg sm:text-xl text-gold"></i>
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-charcoal text-white border-t-4 border-gold pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+                
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gold text-white font-bold text-xl rounded-lg flex items-center justify-center font-heading">M</div>
+                        <div>
+                            <span class="block text-lg font-bold tracking-wider font-heading text-white">MEERA</span>
+                            <span class="block text-[10px] tracking-[0.2em] font-medium text-gold uppercase">Construction & Developer</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">Building Dreams. Creating Legacies. Delivering engineered excellence across residential and commercial developments.</p>
+                </div>
+
+                <!-- Fast Links -->
+                <div>
+                    <h4 class="text-gold font-bold text-sm uppercase tracking-wider mb-4 font-heading">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="#leadership" class="hover:text-gold transition-colors">Leadership Team</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors">Core Services</a></li>
+                        <li><a href="#projects" class="hover:text-gold transition-colors">Project Gallery</a></li>
+                        <li><a href="#timeline" class="hover:text-gold transition-colors">Construction Process</a></li>
+                    </ul>
+                </div>
+
+                <!-- Leadership Info -->
+                <div>
+                    <h4 class="text-gold font-bold text-sm uppercase tracking-wider mb-4 font-heading">Key Contacts</h4>
+                    <div class="space-y-3 text-xs text-gray-300">
+                        <div>
+                            <p class="font-bold text-white">Patel Ashwin</p>
+                            <p class="text-gold text-[11px]">Civil Engineer</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-white">Patel Vishwam</p>
+                            <p class="text-gold text-[11px]">Developer</p>
+                        </div>
+                        <p class="pt-2 text-gray-400"><i class="fa-solid fa-envelope text-gold mr-2"></i>swadhyaybuild@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div>
+                    <h4 class="text-gold font-bold text-sm uppercase tracking-wider mb-4 font-heading">Connect With Us</h4>
+                    <p class="text-xs text-gray-400 mb-4">Direct call or WhatsApp consultation available anytime.</p>
+                    <div class="flex flex-col gap-2">
+                        <a href="tel:7990029194" class="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-white text-xs font-bold px-5 py-3 rounded-xl transition-colors">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call: +91 79900 29194</span>
+                        </a>
+                        <a href="https://wa.me/919510477366?text=Hello%20Meera%20Construction,%20I%20would%20like%20to%20inquire%20about%20a%20project." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-5 py-3 rounded-xl transition-colors">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>WhatsApp: +91 95104 77366</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; <span id="year"></span> Meera Construction & Developer. All Rights Reserved.</p>
+                <p>Designed with Structural Integrity & Modern Elegance</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SERVICE DETAILS MODAL -->
+    <div id="service-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-charcoal/80 backdrop-blur-sm p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl border border-gold/30 my-8">
+            <button id="close-service-modal" class="absolute top-5 right-5 text-gray-400 hover:text-charcoal text-2xl font-bold w-10 h-10 rounded-full bg-offwhite flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="service-modal-content">
+                <!-- Content inserted via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-charcoal/95 backdrop-blur-md p-4">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white hover:text-gold text-3xl font-bold z-50">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center space-y-4">
+            <div class="relative max-h-[80vh] overflow-hidden rounded-2xl shadow-2xl border border-white/10">
+                <img id="lightbox-img" src="" alt="Full view design" class="w-full h-auto max-h-[75vh] object-contain mx-auto">
+            </div>
+            <div>
+                <h4 id="lightbox-title" class="text-xl font-bold text-white font-heading"></h4>
+                <p id="lightbox-desc" class="text-xs text-gold mt-1"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONSULTATION CONFIRMATION MODAL -->
+    <div id="confirm-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-charcoal/80 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center space-y-5 shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-gold/10 text-gold flex items-center justify-center text-3xl mx-auto">
+                <i class="fa-solid fa-paper-plane"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-charcoal font-heading">Request Prepared!</h3>
+            <p class="text-gray-600 text-sm">Your consultation details have been formatted. Click below to open Gmail or your primary email client directly.</p>
+            <div class="flex flex-col gap-3">
+                <a id="gmail-direct-btn" href="#" target="_blank" class="w-full bg-gold hover:bg-gold-dark text-white font-bold py-3.5 rounded-xl text-sm transition-colors shadow-md">
+                    Open Email App
+                </a>
+                <button id="close-confirm-modal" class="w-full bg-offwhite hover:bg-gray-200 text-charcoal font-semibold py-3 rounded-xl text-sm transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 1. Mobile Drawer Navigation Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            });
+        });
+
+        // Smooth scroll handling without url flicker
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    e.preventDefault();
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        const headerOffset = 80;
+                        const elementPosition = targetEl.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                }
+            });
+        });
+
+        // 2. Core 9 Services Data & Rendering
+        const servicesData = [
+            {
+                id: 'res',
+                icon: 'fa-house-chimney-crack',
+                title: 'Residential Construction',
+                desc: 'Turnkey bungalow, duplex, and luxury villa construction tailored to your plot and budget.',
+                details: 'Complete end-to-end residential construction covering foundation excavation, high-grade RCC structural casting (M25/M30), brick masonry, waterproofing, external plastering, and premium finishing. Delivered strictly on schedule with zero compromise on structural safety.'
+            },
+            {
+                id: 'com',
+                icon: 'fa-building-columns',
+                title: 'Commercial Construction',
+                desc: 'Modern office spaces, retail showrooms, and multi-story commercial complex execution.',
+                details: 'Robust commercial engineering designed for high load capacity and flexible layout usage. We handle structural RCC frame, structural steel alignment, safety compliance, exterior glass elevations, and efficient utility planning.'
+            },
+            {
+                id: 'arch',
+                icon: 'fa-compass-drafting',
+                title: 'Architectural Design',
+                desc: 'Aesthetic, functional, and climate-responsive architectural layout planning.',
+                details: 'Custom architectural drafting blending modern aesthetic trends, micro-climate factors, ventilation dynamics, and optimal space utilization to turn raw land into iconic architectural masterpieces.'
+            },
+            {
+                id: 'civil',
+                icon: 'fa-trowel-bricks',
+                title: 'Civil Engineering',
+                desc: 'Structural design, RCC execution, site supervision, and rigorous material quality testing.',
+                details: 'Overseen by Patel Ashwin (Civil Engineer). Includes concrete mix design validation, steel reinforcement stress checks, foundation soil bearing calculations, curing oversight, and continuous structural audits.'
+            },
+            {
+                id: 'floor',
+                icon: 'fa-vector-square',
+                title: '2D Floor Plans',
+                desc: 'Precision Vastu-compliant 2D layouts optimizing room sizing and space efficiency.',
+                details: 'Detailed 2D architectural blueprints displaying exact wall dimensions, door/window schedules, furniture layouts, electrical/plumbing points, and Vastu Shastra principles for balanced living.'
+            },
+            {
+                id: '3dhome',
+                icon: 'fa-cube',
+                title: '3D Home Design',
+                desc: 'Photorealistic 3D interior & exterior layout walkthroughs before actual building starts.',
+                details: 'Experience your future home before the first brick is laid. Our 3D home design includes lighting simulations, material texture previews, and realistic volumetric floor walkthroughs.'
+            },
+            {
+                id: 'elev',
+                icon: 'fa-city',
+                title: 'Home Elevation Design',
+                desc: 'Contemporary, modern, and traditional exterior facade elevation concepts.',
+                details: 'Elevate your property curb appeal. We craft striking exterior front elevation designs incorporating stone cladding, wooden louvers, glass railings, textured plastering, and exterior lighting accents.'
+            },
+            {
+                id: 'reno',
+                icon: 'fa-hammer',
+                title: 'Renovation & Remodeling',
+                desc: 'Structural retrofitting, floor additions, and modern aesthetic makeover services.',
+                details: 'Transform aging structures into modern sanctuaries. Our renovation services cover load-bearing wall modifications, dampness treatment, tile replacement, additional floor construction, and structural reinforcement.'
+            },
+            {
+                id: 'consult',
+                icon: 'fa-clipboard-check',
+                title: 'Project Consultation',
+                desc: 'Expert technical advice on plot viability, cost estimation, and structural health.',
+                details: 'Direct consultation with Patel Ashwin & Patel Vishwam covering preliminary construction cost estimations, structural health reports, material selection assistance, and site development roadmaps.'
+            }
+        ];
+
+        const servicesGrid = document.getElementById('services-grid');
+        servicesData.forEach((s) => {
+            const card = document.createElement('div');
+            card.className = 'bg-offwhite rounded-2xl p-8 border border-gray-200 hover:border-gold transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between group';
+            card.innerHTML = `
+                <div>
+                    <div class="w-14 h-14 rounded-xl bg-charcoal text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid ${s.icon}"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-charcoal font-heading mb-3">${s.title}</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">${s.desc}</p>
+                </div>
+                <button onclick="openServiceModal('${s.id}')" class="inline-flex items-center gap-2 text-xs font-bold text-gold hover:text-gold-dark uppercase tracking-wider group-hover:translate-x-1 transition-transform">
+                    <span>Explore Details</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            `;
+            servicesGrid.appendChild(card);
+        });
+
+        // Service Modal Logic
+        const serviceModal = document.getElementById('service-modal');
+        const serviceModalContent = document.getElementById('service-modal-content');
+
+        function openServiceModal(id) {
+            const service = servicesData.find(s => s.id === id);
+            if (!service) return;
+
+            serviceModalContent.innerHTML = `
+                <div class="w-16 h-16 rounded-2xl bg-charcoal text-gold flex items-center justify-center text-3xl mb-6">
+                    <i class="fa-solid ${service.icon}"></i>
+                </div>
+                <span class="text-xs font-bold text-gold uppercase tracking-wider">Meera Core Service</span>
+                <h3 class="text-2xl font-bold text-charcoal font-heading mt-1 mb-4">${service.title}</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6">${service.details}</p>
+                <div class="pt-4 border-t border-gray-100 flex gap-3">
+                    <a href="#contact" onclick="closeServiceModal();" class="bg-charcoal hover:bg-gold text-white font-bold text-xs px-6 py-3 rounded-xl transition-colors">
+                        Book Service Consultation
+                    </a>
+                </div>
+            `;
+            serviceModal.classList.remove('hidden');
+            serviceModal.classList.add('flex');
+        }
+
+        function closeServiceModal() {
+            serviceModal.classList.add('hidden');
+            serviceModal.classList.remove('flex');
+        }
+
+        document.getElementById('close-service-modal').addEventListener('click', closeServiceModal);
+
+        // 3. Portfolio Data & Filtering Logic
+        const portfolioData = [
+            {
+                title: 'Modern Luxury Elevation',
+                category: 'elevations',
+                badge: 'Sample Design / Reference',
+                img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+                desc: 'Contemporary duplex villa facade with wooden louvers & ambient warm lighting.'
+            },
+            {
+                title: '3D Villa Render Design',
+                category: '3ddesigns',
+                badge: 'Sample Design / Reference',
+                img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
+                desc: 'Full volumetric 3D exterior visualization before groundbreaking.'
+            },
+            {
+                title: 'Structural Steel & Foundation',
+                category: 'construction',
+                badge: 'Site Execution Reference',
+                img: 'https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=80',
+                desc: 'Precision heavy RCC beam casting and steel reinforcement site.'
+            },
+            {
+                title: 'Architectural 2D Blueprint',
+                category: 'floorplans',
+                badge: 'Sample Plan',
+                img: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80',
+                desc: 'Vastu-aligned 2D floor layout for optimal space allocation.'
+            },
+            {
+                title: 'Completed Residential Villa',
+                category: 'completed',
+                badge: 'Completed Project',
+                img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
+                desc: 'Premium completed 4BHK bungalow delivered to happy homeowners.'
+            },
+            {
+                title: 'Minimalist Front Facade',
+                category: 'elevations',
+                badge: 'Sample Design / Reference',
+                img: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80',
+                desc: 'Sleek geometric architectural elevation design.'
+            }
+        ];
+
+        const portfolioGrid = document.getElementById('portfolio-grid');
+
+        function renderPortfolio(filter = 'all') {
+            portfolioGrid.innerHTML = '';
+            const filtered = filter === 'all' ? portfolioData : portfolioData.filter(p => p.category === filter);
+
+            filtered.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer';
+                div.onclick = () => openLightbox(item.img, item.title, item.badge);
+
+                div.innerHTML = `
+                    <div class="relative overflow-hidden h-60">
+                        <img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/800x600/111827/C59B27?text=Design+Reference'">
+                        <div class="absolute top-3 left-3 bg-charcoal/90 backdrop-blur-sm text-gold font-semibold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full border border-gold/30">
+                            ${item.badge}
+                        </div>
+                        <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-2xl">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-charcoal text-base font-heading">${item.title}</h4>
+                        <p class="text-xs text-gray-500 mt-1">${item.desc}</p>
+                    </div>
+                `;
+                portfolioGrid.appendChild(div);
+            });
+        }
+
+        renderPortfolio();
+
+        // Portfolio Filter Button Clicks
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-charcoal', 'text-white', 'active');
+                    b.classList.add('bg-white', 'text-charcoal');
+                });
+                this.classList.add('bg-charcoal', 'text-white', 'active');
+                this.classList.remove('bg-white', 'text-charcoal');
+
+                renderPortfolio(this.dataset.filter);
+            });
+        });
+
+        // 4. Lightbox Modal
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxDesc = document.getElementById('lightbox-desc');
+
+        function openLightbox(img, title, badge) {
+            lightboxImg.src = img;
+            lightboxTitle.textContent = title;
+            lightboxDesc.textContent = badge;
+            lightboxModal.classList.remove('hidden');
+            lightboxModal.classList.add('flex');
+        }
+
+        document.getElementById('close-lightbox').addEventListener('click', () => {
+            lightboxModal.classList.add('hidden');
+            lightboxModal.classList.remove('flex');
+        });
+
+        // Close on modal backdrop click
+        window.addEventListener('click', (e) => {
+            if (e.target === serviceModal) closeServiceModal();
+            if (e.target === lightboxModal) {
+                lightboxModal.classList.add('hidden');
+                lightboxModal.classList.remove('flex');
+            }
+        });
+
+        // 5. Consultation Form Validation & Gmail Direct Mailto Integration
+        const form = document.getElementById('consultation-form');
+        const confirmModal = document.getElementById('confirm-modal');
+        const gmailDirectBtn = document.getElementById('gmail-direct-btn');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('form-name').value.trim();
+            const phone = document.getElementById('form-phone').value.trim();
+            const email = document.getElementById('form-email').value.trim();
+            const project = document.getElementById('form-project').value;
+            const message = document.getElementById('form-message').value.trim();
+
+            if (!name || !phone) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+
+            const mailSubject = encodeURIComponent(`New Consultation Request: ${project} - ${name}`);
+            const mailBody = encodeURIComponent(
+                `Hello Meera Construction & Developer,\n\nI would like to request a consultation for my project.\n\n` +
+                `--- CLIENT DETAILS ---\n` +
+                `Name: ${name}\n` +
+                `Phone: ${phone}\n` +
+                `Email: ${email || 'N/A'}\n` +
+                `Project Type: ${project}\n\n` +
+                `--- PROJECT DETAILS ---\n` +
+                `${message || 'No additional details provided.'}\n\n` +
+                `Best regards,\n${name}`
+            );
+
+            const mailtoUrl = `mailto:swadhyaybuild@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+            
+            gmailDirectBtn.href = mailtoUrl;
+
+            // Show Confirmation Modal
+            confirmModal.classList.remove('hidden');
+            confirmModal.classList.add('flex');
+        });
+
+        document.getElementById('close-confirm-modal').addEventListener('click', () => {
+            confirmModal.classList.add('hidden');
+            confirmModal.classList.remove('flex');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
+```
